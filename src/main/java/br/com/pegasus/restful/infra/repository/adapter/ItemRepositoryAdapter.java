@@ -12,8 +12,8 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ItemRepositoryAdapter implements ItemServicePersistenceAdapter {
 
-	private ItemMapper mapper = ItemMapper.INSTANCE;
 	private final ItemRepository itemRepository;
+	private ItemMapper mapper = ItemMapper.INSTANCE;
 
 	@Override
 	public List<ItemModel> findAll() {
@@ -22,12 +22,12 @@ public class ItemRepositoryAdapter implements ItemServicePersistenceAdapter {
 
 	@Override
 	public Optional<ItemModel> findById(Long id) {
-		return itemRepository.findById(id).map(e -> mapper.toModel(e));
+		return itemRepository.findById(id).map(mapper::toModel);
 	}
 
 	@Override
 	public Optional<ItemModel> findByName(String name) {
-		return itemRepository.findByName(name).map(e -> mapper.toModel(e));
+		return itemRepository.findByName(name).map(mapper::toModel);
 	}
 
 	@Override

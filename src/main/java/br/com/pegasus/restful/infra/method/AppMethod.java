@@ -14,7 +14,7 @@ import br.com.pegasus.restful.infra.constant.AppConstant;
 
 public final class AppMethod {
 
-	private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+	private static final ObjectMapper OBJ_MAPPER = new ObjectMapper();
 
 	public static final ResponseEntity<Map<String, Object>> createExceptionResponse(//
 			String detail, HttpStatus httpStatus) {
@@ -27,7 +27,7 @@ public final class AppMethod {
 	}
 
 	public static final <K, V> Map<K, V> toMap(Object value) {
-		return OBJECT_MAPPER.convertValue(value, new TypeReference<Map<K, V>>() {
+		return OBJ_MAPPER.convertValue(value, new TypeReference<Map<K, V>>() {
 		});
 	}
 

@@ -8,10 +8,11 @@ import br.com.pegasus.restful.infra.repository.entity.ItemEntity;
 
 @Mapper
 public interface ItemMapper {
+
 	ItemMapper INSTANCE = Mappers.getMapper(ItemMapper.class);
 
-	ItemEntity toEntity(ItemModel model);
+	ItemModel toModel(ItemEntity entiry);
 
-	ItemModel toModel(ItemEntity entity);
+	ItemEntity toEntity(ItemModel model);
 
 }

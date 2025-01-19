@@ -23,5 +23,4 @@ public class ItemEntity {
 	@NotBlank(message = "O nome esta em branco!")
 	@Size(min = 3, max = 10, message = "O nome deve ter entre 3 e 10 caracteres.")
 	private String name;
-
 }

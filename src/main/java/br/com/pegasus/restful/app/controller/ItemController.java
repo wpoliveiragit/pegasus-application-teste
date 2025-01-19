@@ -20,9 +20,9 @@ import br.com.pegasus.restful.domain.port.ItemServicePort;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
-@RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/item")
+@RequestMapping("/v1/item")
+@RestController
 public class ItemController {
 
 	private final ItemServicePort itemService;
