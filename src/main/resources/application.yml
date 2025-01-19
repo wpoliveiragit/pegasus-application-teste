@@ -1,0 +1,16 @@
+# Conexão com o DB H2
+spring.datasource.url: "jdbc:h2:mem:pegasusDB"
+spring.datasource.driver-class-name: 'org.h2.Driver'
+spring.datasource.username: 'sa'
+spring.datasource.password: ''
+spring.h2.console.enabled: true # abilita o acesso ao console via url
+spring.h2.console.path: '/h2-pegasus'
+
+# Configurações do JPA
+spring.jpa.show-sql: true
+spring.jpa.hibernate.ddl-auto: update
+
+# Configuração de logs
+logging.pattern.console: '[%d{yyyy-MM-dd HH:mm:ss}] [%-5level] [%logger{0}] :: %msg%n'
+logging.level.org.springframework: INFO
+logging.level.com.exemplo.hexagonal: DEBUG
